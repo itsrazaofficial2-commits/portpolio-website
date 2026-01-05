@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Abdur | Web Developer Portfolio</title>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      background: #f4f4f4;
+    }
+    header {
+      background: #2c3e50;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      background: #34495e;
+      padding: 10px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav a {
+      color: #fff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    section {
+      padding: 40px;
+      background: #fff;
+      margin: 20px auto;
+      max-width: 1000px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .projects {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .project-card {
+      flex: 1 1 300px;
+      border: 1px solid #ddd;
+      padding: 20px;
+      border-radius: 8px;
+      background: #fafafa;
+      text-align: center;
+    }
+    .project-card img {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+    .demo-btn, .code-btn {
+      display: inline-block;
+      padding: 10px 15px;
+      margin: 5px;
+      background: #3498db;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+    .demo-btn:hover, .code-btn:hover {
+      background: #2980b9;
+    }
+    footer {
+      background: #2c3e50;
+      color: #fff;
+      text-align: center;
+      padding: 15px;
+      margin-top: 20px;
+    }
+
+    /* Toggle Button with Slide + Bounce Animation */
+    #scrollToggle {
+      position: fixed;
+      bottom: 20px;
+      right: -80px; /* start hidden off-screen */
+      opacity: 0;
+      pointer-events: none;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 14px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      transition: right 0.5s ease, opacity 0.5s ease, background 0.3s ease;
+      color: #fff;
+    }
+    #scrollToggle.show {
+      right: 20px; /* slide in */
+      opacity: 1;
+      pointer-events: auto;
+      animation: bounceIn 0.6s ease; /* bounce effect */
+    }
+
+    /* Bounce keyframes */
+    @keyframes bounceIn {
+      0% { transform: translateX(100px); opacity: 0; }
+      60% { transform: translateX(-10px); opacity: 1; }
+      80% { transform: translateX(5px); }
+      100% { transform: translateX(0); }
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        display: flex;
+        flex-direction: column;
+      }
+      nav a {
+        margin: 10px 0;
+      }
+      .projects {
+        flex-direction: column;
+      }
+      section {
+        padding: 20px;
+        margin: 10px;
+      }
+      header h1 {
+        font-size: 1.8rem;
+      }
+      header p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Abdur</h1>
+    <p>Web Developer | HTML & CSS Specialist</p>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>Hello! I’m Abdur, a student and passionate web developer from Pakistan. I build clean, responsive websites using HTML and CSS, and I’m learning JavaScript and WordPress to expand my skills.</p>
+  </section>
+
+  <section id="projects">
+  <h2>My Projects</h2>
+  <div class="projects">
+    <div class="project-card">
+      <img src="rivers.png" alt="Pakistan Rivers & Lakes">
+      <h3>Pakistan Rivers & Lakes</h3>
+      <p>A multi-section informational site showcasing Pakistan’s natural beauty.</p>
+      <a href="https://abdurrazzaq.github.io/pakistan-rivers/" target="_blank" class="demo-btn">Live Demo</a>
+      <a href="https://github.com/abdurrazzaq/pakistan-rivers" target="_blank" class="code-btn">View Code</a>
+    </div>
+
+    <div class="project-card">
+      <img src="olx.png" alt="Electronics OLX-style Page">
+      <h3>Electronics OLX-style Page</h3>
+      <p>A product listing layout inspired by OLX, demonstrating e-commerce design.</p>
+      <a href="https://abdurrazzaq.github.io/electronics-olx/" target="_blank" class="demo-btn">Live Demo</a>
+      <a href="https://github.com/abdurrazzaq/electronics-olx" target="_blank" class="code-btn">View Code</a>
+    </div>
+
+    <div class="project-card">
+      <img src="portpolio.png" alt="Personal Portfolio">
+      <h3>Personal Portfolio</h3>
+      <p>A responsive landing page highlighting my skills and services.</p>
+      <a href="https://abdurrazzaq.github.io/portfolio/" target="_blank" class="demo-btn">Live Demo</a>
+      <a href="https://github.com/abdurrazzaq/portfolio" target="_blank" class="code-btn">View Code</a>
+    </div>
+  </div>
+</section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <p>Email: <a href="mailto:yourname@example.com">itsrazaofficial2@gmail.com</a></p>
+    <p>LinkedIn: <a href="#">linkedin.com/in/Abdur Razzaq</a></p>
+    <p>GitHub: <a href="#">github.com/Abdur</a></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 Abdur | Web Developer Portfolio</p>
+  </footer>
+
+  <!-- Toggle Button -->
+  <button id="scrollToggle">↓ Bottom</button>
+
+  <script>
+    const toggleBtn = document.getElementById("scrollToggle");
+
+    window.onscroll = function() {
+      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        toggleBtn.classList.add("show");
+        toggleBtn.textContent = "↑ Top";
+        toggleBtn.style.background = "#3498db"; // Blue for Top
+      } else {
+        toggleBtn.classList.add("show");
+        toggleBtn.textContent = "↓ Bottom";
+        toggleBtn.style.background = "#e67e22"; // Orange for Bottom
+      }
+    };
+
+    toggleBtn.onclick = function() {
+      if (toggleBtn.textContent.includes("Top")) {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      } else {
+        window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+      }
+    };
+  </script>
+</body>
+</html>
